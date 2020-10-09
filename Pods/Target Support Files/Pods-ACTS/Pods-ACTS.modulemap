@@ -1,0 +1,6 @@
+framework module Pods_ACTS {
+  umbrella header "Pods-ACTS-umbrella.h"
+
+  export *
+  module * { export * }
+}

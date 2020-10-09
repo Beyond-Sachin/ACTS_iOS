@@ -1,0 +1,6 @@
+framework module Pods_ACTSUITests {
+  umbrella header "Pods-ACTSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

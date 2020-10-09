@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelfDeclarationTableViewCell" rowHeight="176" id="KGk-i7-Jjw" customClass="SelfDeclarationTableViewCell" customModule="ACTS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="176"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="176"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-ne-V66" customClass="CardView" customModule="ACTS" customModuleProvider="target">
+                        <rect key="frame" x="15" y="15" width="336" height="140"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sZS-nW-35J">
+                                <rect key="frame" x="83" y="27.5" width="170.5" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self Declaration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de4-md-1kb">
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3IID: 4DHDD45F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YO-Ic-Nsl">
+                                        <rect key="frame" x="0.0" y="38" width="170.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 Sep 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWg-0q-b9b">
+                                        <rect key="frame" x="0.0" y="65.5" width="170.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sZS-nW-35J" firstAttribute="centerX" secondItem="oSR-ne-V66" secondAttribute="centerX" id="KJM-Au-6wm"/>
+                            <constraint firstAttribute="width" constant="336" id="fqU-Qz-JEK"/>
+                            <constraint firstItem="sZS-nW-35J" firstAttribute="centerY" secondItem="oSR-ne-V66" secondAttribute="centerY" id="jO4-s8-dOq"/>
+                            <constraint firstAttribute="height" constant="140" id="ypE-bA-DOs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oSR-ne-V66" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="5VV-vM-nXg"/>
+                    <constraint firstItem="oSR-ne-V66" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="isK-rC-NCT"/>
+                    <constraint firstAttribute="trailing" secondItem="oSR-ne-V66" secondAttribute="trailing" constant="15" id="rzJ-XJ-nrz"/>
+                    <constraint firstAttribute="bottom" secondItem="oSR-ne-V66" secondAttribute="bottom" constant="10" id="uWN-eJ-Fh1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="GWg-0q-b9b" id="iDD-yE-g33"/>
+                <outlet property="headingLabel" destination="de4-md-1kb" id="4jF-KE-kfF"/>
+                <outlet property="threeIIDLabel" destination="1YO-Ic-Nsl" id="3LS-gr-f9O"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="81.696428571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

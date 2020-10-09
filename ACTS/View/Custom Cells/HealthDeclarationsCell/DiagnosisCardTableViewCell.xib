@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiagnosisCardTableViewCell" rowHeight="243" id="KGk-i7-Jjw" customClass="DiagnosisCardTableViewCell" customModule="ACTS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="243"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="243"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAq-so-NRz" customClass="CardView" customModule="ACTS" customModuleProvider="target">
+                        <rect key="frame" x="15" y="10" width="290" height="221"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yTx-QL-VcJ" customClass="DynamicTableView" customModule="ACTS" customModuleProvider="target">
+                                <rect key="frame" x="15" y="57" width="260" height="97"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="ryp-3d-RQD"/>
+                                </constraints>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t52-hl-bSu" customClass="CustomButton" customModule="ACTS" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="166" width="165" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ymo-SQ-zg5"/>
+                                    <constraint firstAttribute="width" constant="165" id="nYi-oP-h0l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="REPORT DIAGNOSIS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="reportDiagnosis_pressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dp4-7o-l9o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Diagnosis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-be-IvV">
+                                <rect key="frame" x="15" y="15" width="260" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="T51-ME-36z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yTx-QL-VcJ" firstAttribute="leading" secondItem="fAq-so-NRz" secondAttribute="leading" constant="15" id="1qt-Tt-YXy"/>
+                            <constraint firstItem="t52-hl-bSu" firstAttribute="centerX" secondItem="fAq-so-NRz" secondAttribute="centerX" id="4G7-AI-sny"/>
+                            <constraint firstItem="Jhs-be-IvV" firstAttribute="leading" secondItem="fAq-so-NRz" secondAttribute="leading" constant="15" id="Jda-zi-jZX"/>
+                            <constraint firstAttribute="trailing" secondItem="Jhs-be-IvV" secondAttribute="trailing" constant="15" id="ayG-OK-9Ou"/>
+                            <constraint firstItem="yTx-QL-VcJ" firstAttribute="top" secondItem="Jhs-be-IvV" secondAttribute="bottom" constant="15" id="b1b-gi-b7j"/>
+                            <constraint firstItem="Jhs-be-IvV" firstAttribute="top" secondItem="fAq-so-NRz" secondAttribute="top" constant="15" id="eHQ-2D-iuY"/>
+                            <constraint firstItem="t52-hl-bSu" firstAttribute="top" secondItem="yTx-QL-VcJ" secondAttribute="bottom" constant="12" id="jGJ-tb-GHb"/>
+                            <constraint firstAttribute="bottom" secondItem="t52-hl-bSu" secondAttribute="bottom" constant="20" id="jf3-0S-5hU"/>
+                            <constraint firstItem="t52-hl-bSu" firstAttribute="centerX" secondItem="yTx-QL-VcJ" secondAttribute="centerX" id="sak-r9-euJ"/>
+                            <constraint firstAttribute="trailing" secondItem="yTx-QL-VcJ" secondAttribute="trailing" constant="15" id="tVk-Za-Nyb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="fAq-so-NRz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="PtA-oU-FjS"/>
+                    <constraint firstAttribute="bottom" secondItem="fAq-so-NRz" secondAttribute="bottom" constant="12" id="de5-VA-eI9"/>
+                    <constraint firstItem="fAq-so-NRz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="r9O-5A-OBE"/>
+                    <constraint firstItem="fAq-so-NRz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uqf-kK-LBE"/>
+                    <constraint firstAttribute="trailing" secondItem="fAq-so-NRz" secondAttribute="trailing" constant="15" id="xbH-AG-y4a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="innerTableView" destination="yTx-QL-VcJ" id="Qx7-xk-f2N"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="143.47826086956522"/>
+        </tableViewCell>
+    </objects>
+</document>
