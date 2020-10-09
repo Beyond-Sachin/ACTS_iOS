@@ -38,6 +38,8 @@ class ActsApi: NSObject {
             }
         })
     }
+    
+    
     func updateRegisteredUserInfo(_ parameters:[String:Any],userId : String,completionHandler:@escaping (_ invitableUsers:JSON) -> Void) {
         let header: HTTPHeaders  = [ "Content-Type" :  "application/json" ]
         AF.request(baseUrl+"users/\(userId)", method:.put, parameters: parameters,encoding: JSONEncoding.default,headers: header).responseJSON(completionHandler: { (response) in
